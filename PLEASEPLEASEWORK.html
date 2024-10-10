@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>About Me</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; 
+            background-color: #4E2A84; 
+            padding: 20px;
+            opacity: 2.5; 
+        }
+
+        h1, h2 {
+            color: #ecf0f1; 
+            text-align: center; 
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #3498db;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .section {
+            background-color: #ecf0f1; 
+            width: 30%;
+            padding: 15px; 
+            margin: 20px; 
+            border: 2px solid #bdc3c7; 
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .section:hover {
+            opacity: 0.9; 
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            left: 45%;
+            top: -5px;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 2;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -70px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            to {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        .animated-intro {
+            animation: slideIn 4s; 
+        }
+
+        .overflow-box {
+            width: 300px;
+            height: 100px;
+            overflow: scroll;
+            background-color: lightgray;
+            margin-left: 40%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="animated-intro">Welcome to My About Me Page</h1>
+
+    <div style="background-color: #fcfbfd; padding: 10px; margin: 10px; color: #4E2A84;">
+        Hi, I'm Jack! I'm passionate about combining my interests in journalism and music with a love for technology and analysis.
+    </div>
+
+    <h2>Education and Achievements</h2>
+    <div class="container">
+        <div class="section">
+            <div class="section-content">
+                <h3>Northwestern University</h3>
+                <p>Dual Degree Candidate at Medill School of Journalism and Bienen School of Music</p>
+                <a href="https://www.northwestern.edu" target="_blank">Northwestern University</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-content">
+                <h3>Honors & Awards</h3>
+                <p>Dean's List, Morris Arts' Ehlers Arts Scholarship Recipient, and more.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Fun Facts</h2>
+    <div class="fun-facts-container">
+        <div class="tooltip">
+            <p> Factoids</p>
+            <span class="tooltiptext">I love playing the electric guitar and yo-yoing!</span>
+        </div>
+    </div>
+
+    <h2>Additional Information</h2>
+    <div class="overflow-box">
+        I have experience in journalism, music, research, and AI development. My journey blends creativity with technical expertise. I plan on continuing my education by attending Law School.
+    </div>
+
+    <!-- Hello -->
+
+</body>
+</html>
